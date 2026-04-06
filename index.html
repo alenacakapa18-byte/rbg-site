@@ -261,13 +261,19 @@
       </div>
 
       <div class="formbox">
-        <input class="field" placeholder="Ваше имя / компания" />
-        <input class="field" placeholder="Телефон или WhatsApp" />
-        <input class="field" placeholder="Email" />
-        <textarea placeholder="Укажите интересующий объем, фасовку и станцию поставки"></textarea>
-        <button class="submit" onclick="alert('Форма-заглушка: я могу позже подключить WhatsApp, Telegram или отправку на почту.')">Отправить заявку</button>
-      </div>
-    </div>
+        <form id="leadForm" action="https://formspree.io/f/mojpyrje" method="POST">
+  <input class="field" type="text" name="name" placeholder="Ваше имя / компания" />
+  
+  <input class="field" type="tel" name="phone" placeholder="Номер телефона или WhatsApp *" required />
+  
+  <input class="field" type="email" name="email" placeholder="Email" />
+  
+  <textarea name="message" placeholder="Укажите интересующий объем, фасовку и станцию поставки"></textarea>
+
+  <input type="hidden" name="_subject" value="Новая заявка с сайта Rich Brothers Group" />
+  
+  <button class="submit" type="submit">Отправить заявку</button>
+</form>
   </section>
 
   <footer>
